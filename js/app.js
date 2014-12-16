@@ -26,7 +26,10 @@
     setTimeout(function () {
       text.classList.remove('hidden');
     }, 3000);
+  };
 
+  var randomizeTimeout = function (minValue, maxValue) {
+    return Math.floor(Math.random() * (maxValue - minValue + 1) + minValue);
   };
 
   startButton.addEventListener('click', enterHackerMode);
