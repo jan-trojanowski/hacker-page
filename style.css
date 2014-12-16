@@ -1,0 +1,18 @@
+body {
+  margin: 0;
+  padding: 0;
+  color: #269186;
+}
+
+body.hacker-mode {
+  background: #042029;
+  transition: background 3s;
+}
+
+.hidden {
+  display: none;
+}
+
+.hackered {
+  padding: 5%;
+}
