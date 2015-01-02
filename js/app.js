@@ -4,6 +4,7 @@
   var body = document.body;
   var startButton = document.querySelector('.startButton');
   var placeholder = document.querySelectorAll('.hackered');
+  var skills = document.querySelector('.skills');
 
   var enableFullscreen = function (element) {
     if (element.requestFullscreen) {
@@ -46,6 +47,7 @@
       }, randomizeTimeout(50, 100));
     } else {
       body.classList.add('typing-ended');
+      skills.classList.remove('hidden');
     }
   };
 

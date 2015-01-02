@@ -24,7 +24,24 @@ body.hacker-mode {
   text-transform: uppercase;
 }
 
-.startButton:hover {
+.hacker-mode .info-box:not(.skills) {
+  display: block;
+}
+
+.info-box {
+  background: none;
+  border: 1px solid orange;
+  color: orange;
+  padding: 2% 5%;
+  position: relative;
+  left: 45%;
+  margin-top: 5%;
+  text-transform: uppercase; 
+  font-family: monospace;
+}
+
+.startButton:hover,
+.skills:hover {
   cursor: pointer;
 }
 
@@ -39,7 +56,8 @@ body.hacker-mode {
   animation: blink .5s steps(5, start) infinite;
 }
 
-footer {
+footer,
+.info-box {
   display: none;
 }
 
