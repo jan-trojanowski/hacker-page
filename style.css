@@ -1,7 +1,8 @@
 body {
   margin: 0;
-  padding: 0;
+  padding: 5%;
   color: #269186;
+  font: 20px monospace;
 }
 
 body.hacker-mode {
@@ -13,9 +14,18 @@ body.hacker-mode {
   display: none;
 }
 
-.hackered {
-  font: 20px monospace;
-  padding: 5%;
+.startButton {
+  background: none;
+  border: 1px solid black;
+  padding: 2% 5%;
+  position: absolute;
+  top: 40%;
+  left: 45%;
+  text-transform: uppercase;
+}
+
+.startButton:hover {
+  cursor: pointer;
 }
 
 .hackered:after {
@@ -23,6 +33,22 @@ body.hacker-mode {
   display: inline-block;
   -webkit-animation: blink .5s steps(5, start) infinite;
   animation: blink .5s steps(5, start) infinite;
+}
+
+footer {
+  display: none;
+}
+
+.hacker-mode footer {
+  display: block;
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+}
+
+footer a {
+  text-decoration: none;
+  color: orange;
 }
 
 @keyframes blink {
