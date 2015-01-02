@@ -45,7 +45,7 @@
         startTyping(index, placeholder, text);
       }, randomizeTimeout(50, 100));
     } else {
-      body.classList.add('test');
+      body.classList.add('typing-ended');
     }
   };
 

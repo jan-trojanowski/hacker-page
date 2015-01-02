@@ -28,7 +28,7 @@ body.hacker-mode {
   cursor: pointer;
 }
 
-.test .hackered:after {
+.typing-ended .hackered:after {
   content: '';
 }
 
