@@ -35,10 +35,17 @@
   var startTyping = function (index, placeholder, text) {
     if (index < text.length) {
       setTimeout(function () {
-        placeholder.innerHTML += text[index++];
+        if (text[index] === '\n') {
+          placeholder.innerHTML += '<br /><br />';
+          index++;
+        } else {
+          placeholder.innerHTML += text[index++];
+        }
 
         startTyping(index, placeholder, text);
       }, randomizeTimeout(50, 100));
+    } else {
+      body.classList.add('test');
     }
   };
 

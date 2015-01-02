@@ -28,6 +28,10 @@ body.hacker-mode {
   cursor: pointer;
 }
 
+.test .hackered:after {
+  content: '';
+}
+
 .hackered:after {
   content: '_';
   display: inline-block;
