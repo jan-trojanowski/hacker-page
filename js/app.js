@@ -3,6 +3,8 @@
 
   var body = document.body;
   var startButton = document.querySelector('.startButton');
+  var placeholder = document.querySelector('.hackered');
+  var stringsArray = [];
 
   var enableFullscreen = function (element) {
     if (element.requestFullscreen) {
@@ -17,15 +19,26 @@
   };
 
   var enterHackerMode = function () {
-    var text = document.querySelector('.hackered');
-
     enableFullscreen(document.documentElement);
     startButton.classList.add('hidden');
     body.classList.add('hacker-mode');
 
+    stringsArray = placeholder.dataset.text.split('');
+
     setTimeout(function () {
-      text.classList.remove('hidden');
+      placeholder.classList.remove('hidden');
+      startTyping(0);
     }, 3000);
+  };
+
+  var startTyping = function (index) {
+    if (index < stringsArray.length) {
+      setTimeout(function () {
+        placeholder.innerHTML += stringsArray[index++];
+
+        startTyping(index);
+      }, randomizeTimeout(50, 100));
+    }
   };
 
   var randomizeTimeout = function (minValue, maxValue) {
