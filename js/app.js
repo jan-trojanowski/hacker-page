@@ -47,7 +47,7 @@
         startTyping(index, placeholder, text);
       };
 
-      if (SPACE_PRESSED === true) {
+      if (SPACE_PRESSED) {
         window.clearTimeout(addLetter);
         window.addLetter = setTimeout(writeLetter, randomizeTimeout(50, 100));
       } else if (SPACE_PRESSED === false) {
